@@ -1,0 +1,7 @@
+* binary
+
+*.php text eol=lf
+*.phtml text eol=lf
+*.xml text eol=lf
+*.json text eol=lf
+*.md text eol=lf
