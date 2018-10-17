@@ -16,6 +16,10 @@ Requirements
 ------------
 - PHP >= 7.0.0
 
+Installation via Composer
+------------
+composer require loewenstark/maileon2
+
 Support
 -------
 If you have any issues with this extension, open an issue on [GitHub](https://github.com/Loewenstark/Loewenstark_Maileon2/issues).
