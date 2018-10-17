@@ -7,6 +7,11 @@ Informations
 - Newsletter Requests will be send directly via the API to Maileon
 - No Sync between Magento2 and xQueue E-Mail System!
 
+Tested on
+------------
+- PHP >= 7.1
+- Magento 2.2.x
+
 Requirements
 ------------
 - PHP >= 7.0.0
