@@ -19,7 +19,7 @@
     "files": [
       "registration.php"
     ],
-    "psr-2": {
+    "psr-4": {
       "Loewenstark\\Maileon2\\": ""
     }
   }
