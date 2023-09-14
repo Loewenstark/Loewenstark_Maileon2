@@ -58,7 +58,7 @@ class Api
      */
     public function subscribe($email)
     {
-        $email = trim($email);
+        $email = trim($email ?? '');
         if (!$this->validateEmail($email)) {
             return false;
         }
@@ -89,7 +89,7 @@ class Api
      */
     public function unsubscribe($email)
     {
-        $email = trim($email);
+        $email = trim($email ?? '');
         if (!$this->validateEmail($email)) {
             return false;
         }
@@ -108,7 +108,7 @@ class Api
      */
     public function isSubscribed($email)
     {
-        $email = trim($email);
+        $email = trim($email ?? '');
         if (!$this->validateEmail($email)) {
             return false;
         }
@@ -179,7 +179,7 @@ class Api
      */
     public function validateEmail($email)
     {
-        if (!\Zend_Validate::is($email, \Magento\Framework\Validator\EmailAddress::class)) {
+        if (!\Zend_Validate::is($email ?? '', \Magento\Framework\Validator\EmailAddress::class)) {
             return false;
         }
         return true;

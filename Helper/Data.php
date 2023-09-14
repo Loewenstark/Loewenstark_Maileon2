@@ -59,7 +59,7 @@ class Data extends AbstractHelper
      */
     public function getApiKey()
     {
-        $secret = $this->configModel->getValue('maileon2/general/apikey');
+        $secret = (string) $this->configModel->getValue('maileon2/general/apikey');
         if (substr_count($secret, '-') > 1) {
             return $secret;
         }
