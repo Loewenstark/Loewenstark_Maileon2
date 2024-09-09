@@ -3,7 +3,6 @@
 namespace Loewenstark\Maileon2\Model;
 
 use \Loewenstark\Maileon2\Helper\Data as Maileon2Helper;
-use Magento\Framework\Validator\EmailAddress as EmailAddressValidator;
 
 class Api
 {
@@ -182,7 +181,8 @@ class Api
      */
     public function validateEmail($email)
     {
-        if (!EmailAddressValidator::isValid($email ?? '')) {
+		$validator = new \Laminas\Validator\EmailAddress();
+        if (!$validator_>isValid($email ?? '', \Magento\Framework\Validator\EmailAddress::class)) {
             return false;
         }
         return true;
