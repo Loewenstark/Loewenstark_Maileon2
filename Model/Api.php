@@ -2,6 +2,9 @@
 
 namespace Loewenstark\Maileon2\Model;
 
+use \Loewenstark\Maileon2\Helper\Data as Maileon2Helper;
+use Magento\Framework\Validator\EmailAddress as EmailAddressValidator;
+
 class Api
 {
     const HTTP_CODE_OK = '200';
@@ -31,7 +34,7 @@ class Api
     protected $is_frontend = false;
 
     public function __construct(
-        \Loewenstark\Maileon2\Helper\Data $maileonHelper,
+        Maileon2Helper $maileonHelper,
         array $data = array()
     ) {
         $this->maileonHelper = $maileonHelper;
@@ -179,7 +182,7 @@ class Api
      */
     public function validateEmail($email)
     {
-        if (!\Zend_Validate::is($email ?? '', \Magento\Framework\Validator\EmailAddress::class)) {
+        if (!\EmailAddressValidator::isValid($email ?? '')) {
             return false;
         }
         return true;
