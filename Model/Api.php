@@ -182,7 +182,7 @@ class Api
      */
     public function validateEmail($email)
     {
-        if (!\EmailAddressValidator::isValid($email ?? '')) {
+        if (!EmailAddressValidator::isValid($email ?? '')) {
             return false;
         }
         return true;
