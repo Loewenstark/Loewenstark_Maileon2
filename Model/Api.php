@@ -182,7 +182,7 @@ class Api
     public function validateEmail($email)
     {
 		$validator = new \Laminas\Validator\EmailAddress();
-        if (!$validator>isValid($email ?? '', \Magento\Framework\Validator\EmailAddress::class)) {
+        if (!$validator->isValid($email ?? '', \Magento\Framework\Validator\EmailAddress::class)) {
             return false;
         }
         return true;
